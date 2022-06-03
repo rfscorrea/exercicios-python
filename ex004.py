@@ -1,0 +1,6 @@
+n = input('Escreva algo: ')
+print('{} é numérico?'.format(n), n.isnumeric())
+print('{} é alfabético?'.format(n), n.isalpha())
+print('{} é alfanumérico?'.format(n), n.isalnum())
+print('{} é um dígito?'.format(n), n.isdigit())
+print('{} é um decimal?'.format(n), n.isdecimal())
