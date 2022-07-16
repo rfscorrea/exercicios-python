@@ -1,6 +1,3 @@
-from utilidadesCeV import moeda
-
-
 def leiadinheiro(msg):
     teste = False
     while teste is False:
@@ -8,6 +5,15 @@ def leiadinheiro(msg):
         if valor.isalpha() is True or valor.strip() == '':
             print(f'"{valor}" não é uma entrada válida!!')
         else:
-            teste = True
             return float(valor)
 
+
+def leiafloat(msg):
+    while True:
+        valor = str(input(msg)).replace(',', '.').strip()
+        try:
+            valor = float(valor)
+        except Exception as e:
+            print(f'Erro: {e.__class__}')
+        else:
+            return valor
